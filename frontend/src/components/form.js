@@ -1,5 +1,11 @@
 import React from "react"
 
+  const formInput = [
+    {inputName: "id", inputType: "text", inputPlaceHolder: ""},
+    {inputName: "type", inputType: "text", inputPlaceHolder: ""},
+    {inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:"}
+  ]
+
 export default class Form extends React.Component {
 
   constructor(props) {
@@ -16,16 +22,11 @@ export default class Form extends React.Component {
     }
   }
 
-  const formInput = [
-    {inputName: "id", inputType: "text", inputPlaceHolder: "", inputValue: {this.state.id}},
-    {inputName: "type", inputType: "text", inputPlaceHolder: "", inputValue: {this.state.type}},
-    {inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:", inputValue: {this.state.text}}
-  ]
 
   handleInput = event => {
     let input = {}
     input[event.target.name] = event.target.value
-    setState(input)
+    this.setState(input)
   }
 
   handleSubmit = event => {
@@ -47,10 +48,11 @@ export default class Form extends React.Component {
       <form onSubmit={this.handleSubmit} className="form-container">
         <h1 className="title">Post a question</h1>
         {formInput.map(item => {
-          return
-          <div>
-            <input type={item.inputType} placeholder={item.inputName} value={item.inputValue} onChange={this.handleInput} />
-          </div>
+          return (
+            <div>
+              <input type={item.inputType} placeholder={item.inputName} value={this.state[item.inputName]} onChange={this.handleInput} />
+            </div>
+          )
         })}
         <div>
           <input className="submit-btn" type="submit" value="Save" />
