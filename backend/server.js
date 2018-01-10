@@ -4,7 +4,7 @@ import cors from "cors"
 import bodyParser from "body-parser"
 
 const app = express()
-app.use(bodyParser.urluncoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 app.use(cors())
@@ -59,6 +59,6 @@ app.get("/answers", (req, res) => {
   })
 })
 
-app.listen(8080, () =>
-  console.log("Example app listening on port 8080!")
+app.listen(8082, () =>
+  console.log("Example app listening on port 8082!")
 )
