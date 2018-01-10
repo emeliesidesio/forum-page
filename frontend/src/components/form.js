@@ -1,10 +1,15 @@
 import React from "react"
 
-  const formInput = [
-    {inputName: "id", inputType: "text", inputPlaceHolder: ""},
-    {inputName: "type", inputType: "text", inputPlaceHolder: ""},
-    {inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:"}
-  ]
+const formInput = [
+  { inputName: "id", inputType: "text", inputPlaceHolder: "" },
+  { inputName: "type", inputType: "text", inputPlaceHolder: "" },
+  { inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:" },
+  { inputName: "date", inputType: "text", inputPlaceHolder: "Date of submission" },
+  { inputName: "sender", inputType: "text", inputPlaceHolder: "Your name here" },
+  { inputName: "published", inputType: "boolean", inputPlaceHolder: "Is this published?" },
+  { inputName: "handled", inputType: "boolean", inputPlaceHolder: "Has this been handled?" },
+  { inputName: "image", inputType: "text", inputPlaceHolder: "Upload your picture" }
+]
 
 export default class Form extends React.Component {
 
