@@ -27,9 +27,8 @@ export default class Form extends React.Component {
     }
   }
 
-
   handleInput = event => {
-    let input = {}
+    const input = {}
     input[event.target.name] = event.target.value
     this.setState(input)
   }
@@ -55,7 +54,11 @@ export default class Form extends React.Component {
         {formInput.map(item => {
           return (
             <div>
-              <input type={item.inputType} placeholder={item.inputName} value={this.state[item.inputName]} onChange={this.handleInput} />
+              <input
+                type={item.inputType}
+                placeholder={item.inputName}
+                value={this.state[item.inputName]}
+                onChange={this.handleInput} />
             </div>
           )
         })}
