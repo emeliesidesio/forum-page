@@ -1,4 +1,5 @@
 import React from "react"
+import "./form.css"
 
 const formInput = [
   { inputName: "id", inputType: "text", inputPlaceHolder: "" },
@@ -50,7 +51,6 @@ export default class Form extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className="form-container">
-        <h1 className="title">Post a question</h1>
         {formInput.map(item => {
           return (
             <div>
@@ -63,7 +63,7 @@ export default class Form extends React.Component {
           )
         })}
         <div>
-          <input className="submit-btn" type="submit" value="Save" />
+          <input className="submit-btn" type="submit" value="Send" />
         </div>
       </form>
     )
