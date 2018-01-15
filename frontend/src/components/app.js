@@ -16,8 +16,8 @@ class App extends React.Component {
               <li>I am running my server on localhost8080,
                 but what if I want to deploy my site?
               </li>
-              <li>What is MungoDB, and how do I install it?</li>
-              <li>Why can I not install my MOngoDB?</li>
+              <li>What is MongoDB, and how do I install it?</li>
+              <li>Why can I not install my MongoDB?</li>
               <li>What is Compass and how do I install it?</li>
             </ul>
           </div>

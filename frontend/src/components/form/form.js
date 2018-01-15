@@ -2,13 +2,13 @@ import React from "react"
 import "./form.css"
 
 const formInput = [
-  { inputName: "id", inputType: "text", inputPlaceHolder: "" },
-  { inputName: "type", inputType: "text", inputPlaceHolder: "" },
+  { inputName: "id", inputType: "text", inputPlaceHolder: "Question ID" },
+  { inputName: "type", inputType: "text", inputPlaceHolder: "Question Type" },
   { inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:" },
-  { inputName: "date", inputType: "text", inputPlaceHolder: "Date of submission" },
-  { inputName: "sender", inputType: "text", inputPlaceHolder: "Your name here" },
-  { inputName: "published", inputType: "boolean", inputPlaceHolder: "Is this published?" },
-  { inputName: "handled", inputType: "boolean", inputPlaceHolder: "Has this been handled?" },
+  { inputName: "date", inputType: "text", inputPlaceHolder: "Date of submission:" },
+  { inputName: "sender", inputType: "text", inputPlaceHolder: "Your name here:" },
+  { inputName: "published", inputType: "radio", inputPlaceHolder: "Is this published?" },
+  { inputName: "handled", inputType: "radio", inputPlaceHolder: "Has this been handled?" },
   { inputName: "image", inputType: "text", inputPlaceHolder: "Upload your picture" }
 ]
 
@@ -56,7 +56,8 @@ export default class Form extends React.Component {
             <div>
               <input
                 type={item.inputType}
-                placeholder={item.inputName}
+                name={item.inputName}
+                placeholder={item.inputPlaceHolder}
                 value={this.state[item.inputName]}
                 onChange={this.handleInput} />
             </div>
