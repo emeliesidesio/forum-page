@@ -1,5 +1,6 @@
 import React from "react"
 import Form from "components/form/form"
+import Category from "components/category/category"
 
 class App extends React.Component {
 
@@ -11,7 +12,9 @@ class App extends React.Component {
         </div>
         <div className="forum-body">
           <div className="question-container">
-            <ul>
+            <Category />
+            <ul className="accordion-list">
+              <h2>Latest questions</h2>
               <li>What is mongoose and how do I install it?</li>
               <li>I am running my server on localhost8080,
                 but what if I want to deploy my site?

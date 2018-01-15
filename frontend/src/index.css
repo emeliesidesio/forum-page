@@ -11,18 +11,18 @@ body {
 
 h1 {
   font-size: 40px;
-  font-weight: lighter;
   margin: 0;
   color: white;
   letter-spacing: 1.5px;
+  font-weight: lighter;
 }
 
 h2 {
   font-size: 25px;
-  font-weight: lighter;
   margin: 0;
   color: white;
   margin-bottom: 30px;
+  font-weight: lighter;
 }
 
 .forum-top {
@@ -47,7 +47,7 @@ h2 {
   height: auto;
 }
 
-.question-container li {
+.accordion-list li {
   height: 50px;
   margin-bottom: 10px;
   list-style: none;
@@ -61,14 +61,19 @@ h2 {
   box-shadow: 2px 2px 10px #BFBFBF;
 }
 
-.question-container li:hover {
+.accordion-list li:hover {
   position: relative;
   top: -2px;
 }
 
-.question-container ul {
+.accordion-list {
   margin: 0;
   padding: 0;
+}
+
+.accordion-list h2 {
+  color: #34A390;
+  margin: 40px 0 20px 0;
 }
 
 .question-form {

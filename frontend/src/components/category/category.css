@@ -1,0 +1,30 @@
+.category-box {
+  height: auto;
+  margin: 0;
+}
+
+.category-box ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.category-box li {
+  height: 50px;
+  width: 110px;
+  list-style: none;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 15px;
+  color: #34A390;
+  box-shadow: 2px 2px 10px #BFBFBF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-box li:hover {
+  background-color: #34A390;
+  color: white;
+}

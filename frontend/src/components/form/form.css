@@ -29,6 +29,5 @@ input::placeholder {
 
 .submit-btn:hover {
   background-color: white;
-  opacity: 0.5;
   color: #34A390;
 }
