@@ -1,0 +1,23 @@
+.accordion-list li {
+  height: 50px;
+  margin-bottom: 10px;
+  list-style: none;
+  background: white;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #34A390;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 10px #BFBFBF;
+}
+
+.accordion-list li:hover {
+  position: relative;
+  top: -2px;
+}
+
+.accordion-list {
+  margin: 0;
+  padding: 0;
+}

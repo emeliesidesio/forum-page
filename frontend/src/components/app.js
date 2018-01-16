@@ -14,17 +14,8 @@ class App extends React.Component {
         <div className="forum-body">
           <div className="question-container">
             <Category />
+            <h2>Latest questions</h2>
             <Threads />
-            <ul className="accordion-list">
-              <h2>Latest questions</h2>
-              <li>What is mongoose and how do I install it?</li>
-              <li>I am running my server on localhost8080,
-                but what if I want to deploy my site?
-              </li>
-              <li>What is MongoDB, and how do I install it?</li>
-              <li>Why can I not install my MongoDB?</li>
-              <li>What is Compass and how do I install it?</li>
-            </ul>
           </div>
           <div className="question-form">
             <h2>Post a question</h2>
