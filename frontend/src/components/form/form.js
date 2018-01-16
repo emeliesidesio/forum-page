@@ -1,17 +1,6 @@
 import React from "react"
 import "./form.css"
 
-const formInput = [
-  { inputName: "id", inputType: "text", inputPlaceHolder: "Question ID" },
-  { inputName: "type", inputType: "text", inputPlaceHolder: "Question Type" },
-  { inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:" },
-  { inputName: "date", inputType: "text", inputPlaceHolder: "Date of submission:" },
-  { inputName: "sender", inputType: "text", inputPlaceHolder: "Your name here:" },
-  { inputName: "published", inputType: "radio", inputPlaceHolder: "Is this published?" },
-  { inputName: "handled", inputType: "radio", inputPlaceHolder: "Has this been handled?" },
-  { inputName: "image", inputType: "text", inputPlaceHolder: "Upload your picture" }
-]
-
 export default class Form extends React.Component {
 
   constructor(props) {
@@ -19,6 +8,7 @@ export default class Form extends React.Component {
     this.state = {
       id: "",
       type: "",
+      title: "",
       text: "",
       date: "",
       sender: "",
@@ -51,11 +41,12 @@ export default class Form extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className="form-container">
-        {formInput.map(item => {
+        {this.props.formInput.map(item => {
           return (
             <div>
               <input
                 type={item.inputType}
+                title={item.inputType}
                 name={item.inputName}
                 placeholder={item.inputPlaceHolder}
                 value={this.state[item.inputName]}

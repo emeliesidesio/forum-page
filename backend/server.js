@@ -17,8 +17,9 @@ mongoose.connection.on("error", err => console.error("Connection error:", err))
 mongoose.connection.once("open", () => console.log("Connected to mongodb"))
 
 const ForumInput = mongoose.model("ForumInput", {
-  id: Number,
+  threadNo: Number,
   type: String,
+  title: String,
   text: String,
   date: Date,
   sender: String,
