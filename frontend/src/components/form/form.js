@@ -36,7 +36,7 @@ export default class Form extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    fetch("http://localhost:8082", {
+    fetch("http://localhost:8082/questions", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
