@@ -1,6 +1,7 @@
 import React from "react"
 import Form from "components/form/form"
 import Category from "components/category/category"
+import Threads from "components/threads/threads"
 
 class App extends React.Component {
 
@@ -13,6 +14,7 @@ class App extends React.Component {
         <div className="forum-body">
           <div className="question-container">
             <Category />
+            <Threads />
             <ul className="accordion-list">
               <h2>Latest questions</h2>
               <li>What is mongoose and how do I install it?</li>
