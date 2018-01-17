@@ -29,6 +29,16 @@ export default class Threads extends React.Component {
             date={this.props.date}
             item={item} />
         })}
+        {/*  Want to use this map with filtering instead */}
+
+        {/* {this.state.forumThreads.filter(item => item.category === this.props.filterVariable).map(item => {
+          return <Thread
+            formInput={this.props.formInput}
+            type={this.props.type}
+            date={this.props.date}
+            item={item} />
+        })} */}
+
       </div>
     )
   }

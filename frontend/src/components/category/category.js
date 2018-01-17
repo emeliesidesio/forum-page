@@ -16,7 +16,8 @@ export default class Category extends React.Component {
           {categories.map(item => {
             return (
               <button value={item} onClick={this.handleCategoryClick}>{item}</button>
-            )})}
+            )})
+          }
         </ul>
       </div>
     )
