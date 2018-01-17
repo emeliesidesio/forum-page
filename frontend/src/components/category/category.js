@@ -7,6 +7,7 @@ export default class Category extends React.Component {
   // Om man klickar på en kategori, då ska man filtrera på den här kategorin i newQuestions
   handleCategoryClick = event => {
     console.log("you clicked a category", event.target.value)
+    this.props.categoryClick(event.target.value)
   }
 
   render() {
