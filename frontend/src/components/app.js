@@ -9,9 +9,9 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          <Users />
+          <Route exact path="/" component={Users} />
+          <Route exact path="/admin" component={Admin} />
         </div>
-        <Route path="/admin" component={Admin} />
       </BrowserRouter>
     )
   }
