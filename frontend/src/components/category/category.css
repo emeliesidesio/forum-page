@@ -10,7 +10,7 @@
   padding: 0;
 }
 
-.category-box li {
+.category-box button {
   height: 50px;
   width: 110px;
   list-style: none;
@@ -24,7 +24,7 @@
   align-items: center;
 }
 
-.category-box li:hover {
+.category-box button:hover {
   background-color: #34A390;
   color: white;
 }
