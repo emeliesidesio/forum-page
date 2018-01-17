@@ -38,10 +38,10 @@ export default class Thread extends React.Component {
   render() {
     return (
       <ul className="accordion-list">
-        <li onClick={this.handleTitleClick}>{this.props.item.title}, {this.props.item.threadNo}</li>
+        <li onClick={this.handleTitleClick}>{this.props.item.title}</li>
         {this.state.forumThread.map(item => {
           return (
-            <div>{item.text}, {this.props.item.threadNo}</div>
+            <div>{item.text}</div>
           )
         })}
         <Form
