@@ -10,8 +10,8 @@ const newQuestionForm = [
 ]
 
 const responseForm = [
-  { inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:" },
-  { inputName: "sender", inputType: "text", inputPlaceHolder: "Your name here:" }
+  { inputName: "text", inputType: "text", inputPlaceHolder: "Answer:" },
+  { inputName: "sender", inputType: "text", inputPlaceHolder: "Sender:" }
 ]
 
 export default class Users extends React.Component {
