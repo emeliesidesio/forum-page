@@ -5,9 +5,13 @@ export default class Form extends React.Component {
 
   constructor(props) {
     super(props)
+    let threadNum = ""
+    if (this.props.threadNo) {
+      threadNum = this.props.threadNo
+    }
     this.state = {
       id: "",
-      threadNo: "",
+      threadNo: threadNum,
       type: "",
       title: "",
       text: "",
