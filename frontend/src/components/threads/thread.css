@@ -21,3 +21,31 @@
   margin: 0;
   padding: 0;
 }
+
+.thread-container {
+  height: auto;
+  background: white;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #34A390;
+  padding-left: 15px;
+  box-shadow: 2px 2px 10px #BFBFBF;
+}
+
+.date-field {
+  height: auto;
+  padding-top: 25px;
+  font-size: 12px;
+}
+
+.text-field {
+  height: auto;
+  margin: 30px 0 30px 0;
+}
+
+.sender-field {
+  height: auto;
+  padding-bottom: 25px;
+  font-size: 12px;
+  font-style: italic;
+}

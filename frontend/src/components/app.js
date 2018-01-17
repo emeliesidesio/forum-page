@@ -17,38 +17,34 @@ const responseForm = [
   { inputName: "sender", inputType: "text", inputPlaceHolder: "Your name here:" }
 ]
 
-const today = "2018-01-17" // get date somehow
-
 class App extends React.Component {
 
   render() {
     return (
       <BrowserRouter>
-        <div className="forum-page">
-          <div className="forum-top">
-            <h1>MongoDB Forum</h1>
+      <div className="forum-page">
+        <div className="forum-top">
+          <h1>MongoDB Forum</h1>
+        </div>
+        <div className="forum-body">
+          <div className="question-container">
+            <Category />
+            <h2>Latest questions</h2>
+            <Threads
+              formInput={responseForm}
+              type="response" />
           </div>
-          <div className="forum-body">
-            <div className="question-container">
-              <Category />
-              <h2>Latest questions</h2>
-              <Threads
-                formInput={responseForm}
-                type="response"
-                date={today} />
-            </div>
-            <div className="question-form">
-              <h2>Post a question</h2>
-              <Form
-                formInput={newQuestionForm}
-                type="newQuestion"
-                date={today} />
-            </div>
+          <div className="question-form">
+            <h2>Post a question</h2>
+            <Form
+              formInput={newQuestionForm}
+              type="newQuestion" />
           </div>
 
           <Route path="/admin" component={Admin} />
 
           <Link to="/admin">Admin</Link>
+          </div>
         </div>
       </BrowserRouter>
     )
