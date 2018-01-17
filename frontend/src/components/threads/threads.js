@@ -20,24 +20,24 @@ export default class Threads extends React.Component {
   }
 
   render() {
+    const kategori = this.props.filterVariable
+
+    let forumThreadsToRender = this.state.forumThreads
+
+    if (kategori) {
+      forumThreadsToRender = forumThreadsToRender.filter(item =>
+        item.category === this.props.filterVariable)
+    }
+
     return (
       <div>
-        {/* {this.state.forumThreads.map(item => {
-          return <Thread
-            formInput={this.props.formInput}
-            type={this.props.type}
-            date={this.props.date}
-            item={item} />
-        })} */}
-        {/*  Want to use this map with filtering instead */}
 
-        {this.state.forumThreads.filter(item => item.category === this.props.filterVariable).map(item => {
-          return <Thread
+        {forumThreadsToRender.map(item =>
+          <Thread
             formInput={this.props.formInput}
             type={this.props.type}
             date={this.props.date}
-            item={item} />
-        })}
+            item={item} />)}
 
       </div>
     )

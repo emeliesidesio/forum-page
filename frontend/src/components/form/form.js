@@ -76,6 +76,7 @@ export default class Form extends React.Component {
           )
         })}
 
+
         <p>Category:</p>
         <select name="category" onChange={this.handleInput} >
           {categories.map(item => {
