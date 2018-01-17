@@ -17,7 +17,7 @@ export default class Admin extends React.Component {
     return (
       <div className="forum-page">
         <div className="forum-top">
-          <h1>MongoDB Forum</h1>
+          <h1>MongoDB Admin</h1>
         </div>
         <div className="forum-body">
           <div className="question-container">
