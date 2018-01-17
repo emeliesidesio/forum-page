@@ -38,7 +38,8 @@ export default class Threads extends React.Component {
             type={this.props.type}
             date={this.props.date}
             item={item}
-            category={this.props.filterVariable} />)}
+            // category={this.props.filterVariable}
+          />)}
 
       </div>
     )

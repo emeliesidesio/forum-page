@@ -19,7 +19,6 @@ export default class Form extends React.Component {
     if (this.props.type) {
       gotType = this.props.type
     }
-
     if (this.props.category) {
       gotCategory = this.props.category
     }
@@ -28,14 +27,14 @@ export default class Form extends React.Component {
       id: "",
       threadNo: threadNum,
       type: gotType,
+      category: gotCategory,
       title: "",
       text: "",
       date: new Date(),
       sender: "",
       published: "",
       handled: "",
-      image: "",
-      category: gotCategory
+      image: ""
     }
   }
 
@@ -82,16 +81,15 @@ export default class Form extends React.Component {
           )
         })}
 
-        <div className="inputCategory"
+        <div
+          className="inputCategory"
           value={this.state.category}
-          style={{visibility: this.props.type === "newQuestion" ? 'visible' : 'hidden' }}>
+          style={{ visibility: this.props.type === "newQuestion" ? "visible" : "hidden" }}>
+
           Category:
           <select className="selectCategory" name="category" onChange={this.handleInput} >
-            {categories.map(item => {
-              return (
-                <option value={item}>{item}</option>
-              )
-            })}
+            {categories.map(item =>
+              <option value={item}>{item}</option>)}
           </select>
         </div>
 

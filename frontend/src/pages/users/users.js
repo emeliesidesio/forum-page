@@ -25,7 +25,6 @@ export default class Users extends React.Component {
 
   categoryClick = cate => {
     console.log("This is the users component speaking about category", cate)
-
     this.setState({
       filterVariable: cate
     }, () => {

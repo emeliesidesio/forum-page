@@ -28,9 +28,8 @@ export default class Thread extends React.Component {
     })
   }
 
-  // En funktion som visar tråden när vi klickar på titeln. Toggleclass, fetch med threadNo.
-  handleTitleClick = () => {
-    const threadNo = this.props.item.threadNo
+  handleTitleClick = event => {
+    const threadNo = event.target.dataset.message //this.props.item.threadNo
     console.log("tråd", threadNo)
     this.handleThreadItems(threadNo)
   }
@@ -38,7 +37,7 @@ export default class Thread extends React.Component {
   render() {
     return (
       <ul className="accordion-list">
-        <li onClick={this.handleTitleClick}>{this.props.item.title}</li>
+        <li data-message={this.props.item.threadNo} onClick={this.handleTitleClick} >{this.props.item.title}</li>
         {this.state.forumThread.map(item => {
           return (
             <div className="thread-container">
@@ -51,7 +50,7 @@ export default class Thread extends React.Component {
                   threadNo={this.props.item.threadNo}
                   type={this.props.type}
                   date={this.props.date}
-                  category={this.props.category} />
+                  category={this.props.item.category} />
               </div>
             </div>
           )
