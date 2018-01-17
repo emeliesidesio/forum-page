@@ -11,12 +11,17 @@ export default class Form extends React.Component {
 
     let threadNum = uuid()
     let gotType = ""
+    let gotCategory = ""
 
     if (this.props.threadNo) {
       threadNum = this.props.threadNo
     }
     if (this.props.type) {
       gotType = this.props.type
+    }
+
+    if (this.props.category) {
+      gotCategory = this.props.category
     }
 
     this.state = {
@@ -30,7 +35,7 @@ export default class Form extends React.Component {
       published: "",
       handled: "",
       image: "",
-      category: ""
+      category: gotCategory
     }
   }
 
@@ -77,7 +82,9 @@ export default class Form extends React.Component {
           )
         })}
 
-        <div className="inputCategory" style={{visibility: this.props.type === "newQuestion" ? 'visible' : 'hidden' }}>
+        <div className="inputCategory"
+          value={this.state.category}
+          style={{visibility: this.props.type === "newQuestion" ? 'visible' : 'hidden' }}>
           Category:
           <select className="selectCategory" name="category" onChange={this.handleInput} >
             {categories.map(item => {

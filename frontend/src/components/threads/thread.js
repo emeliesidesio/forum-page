@@ -50,7 +50,8 @@ export default class Thread extends React.Component {
                   formInput={this.props.formInput}
                   threadNo={this.props.item.threadNo}
                   type={this.props.type}
-                  date={this.props.date} />
+                  date={this.props.date}
+                  category={this.props.category} />
               </div>
             </div>
           )
