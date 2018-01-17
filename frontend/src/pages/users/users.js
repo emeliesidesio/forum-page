@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import Form from "components/form/form"
 import Category from "components/category/category"
 import Threads from "components/threads/threads"
@@ -10,8 +11,8 @@ const newQuestionForm = [
 ]
 
 const responseForm = [
-  { inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:" },
-  { inputName: "sender", inputType: "text", inputPlaceHolder: "Your name here:" }
+  { inputName: "text", inputType: "text", inputPlaceHolder: "Answer:" },
+  { inputName: "sender", inputType: "text", inputPlaceHolder: "Sender:" }
 ]
 
 export default class Users extends React.Component {
@@ -56,6 +57,7 @@ export default class Users extends React.Component {
               type="newQuestion" />
           </div>
         </div>
+        <Link to="/admin">Admin</Link>
       </div>
     )
   }
