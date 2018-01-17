@@ -60,6 +60,7 @@ export default class Form extends React.Component {
   }
 
   render() {
+
     return (
       <form onSubmit={this.handleSubmit} className="form-container">
         {this.props.formInput.map(item => {
@@ -76,15 +77,16 @@ export default class Form extends React.Component {
           )
         })}
 
-
-        <p>Category:</p>
-        <select name="category" onChange={this.handleInput} >
-          {categories.map(item => {
-            return (
-              <option value={item}>{item}</option>
-            )
-          })}
-        </select>
+        <div className="inputCategory" style={{visibility: this.props.type === "newQuestion" ? 'visible' : 'hidden' }}>
+          Category:
+          <select className="selectCategory" name="category" onChange={this.handleInput} >
+            {categories.map(item => {
+              return (
+                <option value={item}>{item}</option>
+              )
+            })}
+          </select>
+        </div>
 
         <div>
           <input className="submit-btn" type="submit" value="Send" />
