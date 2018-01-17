@@ -9,8 +9,6 @@ const AdminResponseForm = [
   { inputName: "handled", inputType: "radio", inputPlaceHolder: "Has this been handled?" }
 ]
 
-const today = "2018-01-17" // get date somehow
-
 export default class Admin extends React.Component {
 
   render() {
@@ -25,8 +23,7 @@ export default class Admin extends React.Component {
             <h2>Latest questions</h2>
             <Threads
               formInput={AdminResponseForm}
-              type="adminResponse"
-              date={today} />
+              type="adminResponse" />
           </div>
         </div>
       </div>

@@ -20,10 +20,19 @@ const ForumInput = mongoose.model("ForumInput", {
   id: Number,
   threadNo: String,
   type: String,
-  title: String,
-  text: String,
+  title: {
+    type: String,
+    required: true
+  },
+  text: {
+    type: String,
+    required: true
+  },
   date: Date,
-  sender: String,
+  sender: {
+    type: String,
+    required: true
+  },
   publish: Boolean,
   handled: Boolean,
   image: String
