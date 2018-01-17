@@ -1,18 +1,26 @@
 import React from "react"
+import uuid from "uuid"
 import "./form.css"
 
 export default class Form extends React.Component {
 
   constructor(props) {
     super(props)
-    let threadNum = ""
+
+    let threadNum = uuid()
+    let gotType = ""
+
     if (this.props.threadNo) {
       threadNum = this.props.threadNo
     }
+    if (this.props.type) {
+      gotType = this.props.type
+    }
+
     this.state = {
       id: "",
       threadNo: threadNum,
-      type: "",
+      type: gotType,
       title: "",
       text: "",
       date: "",

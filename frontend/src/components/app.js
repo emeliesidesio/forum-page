@@ -4,17 +4,17 @@ import Category from "components/category/category"
 import Threads from "components/threads/threads"
 
 const newQuestionForm = [
-  { inputName: "id", inputType: "text", inputPlaceHolder: "Question ID" },
-  { inputName: "threadNo", inputType: "text", inputPlaceHolder: "Thread Number" },
-  { inputName: "type", inputType: "text", inputPlaceHolder: "Question Type" },
   { inputName: "title", inputType: "text", inputPlaceHolder: "Question title" },
   { inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:" },
-  { inputName: "date", inputType: "text", inputPlaceHolder: "Date of submission:" },
-  { inputName: "sender", inputType: "text", inputPlaceHolder: "Your name here:" },
-  { inputName: "published", inputType: "radio", inputPlaceHolder: "Is this published?" },
-  { inputName: "handled", inputType: "radio", inputPlaceHolder: "Has this been handled?" },
-  { inputName: "image", inputType: "text", inputPlaceHolder: "Upload your picture" }
+  { inputName: "sender", inputType: "text", inputPlaceHolder: "Your name here:" }
 ]
+
+const responseForm = [
+  { inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:" },
+  { inputName: "sender", inputType: "text", inputPlaceHolder: "Your name here:" }
+]
+
+const today = "2018-01-17" // get date somehow
 
 class App extends React.Component {
 
@@ -28,12 +28,17 @@ class App extends React.Component {
           <div className="question-container">
             <Category />
             <h2>Latest questions</h2>
-            <Threads />
+            <Threads
+              formInput={responseForm}
+              type="response"
+              date={today} />
           </div>
           <div className="question-form">
             <h2>Post a question</h2>
             <Form
-              formInput={newQuestionForm} />
+              formInput={newQuestionForm}
+              type="newQuestion"
+              date={today} />
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@ mongoose.connection.once("open", () => console.log("Connected to mongodb"))
 
 const ForumInput = mongoose.model("ForumInput", {
   id: Number,
-  threadNo: Number,
+  threadNo: String,
   type: String,
   title: String,
   text: String,
@@ -55,8 +55,21 @@ app.get("/questions", (req, res) => {
   })
 })
 
+app.get("/questions/original", (req, res) => {
+  // const threadNumber = req.params.threadNo
+  // console.log(threadNumber)
+  ForumInput.find({ type: "newQuestion"}).then(allFoundItems => {
+    console.log(allFoundItems)
+    if (allFoundItems) {
+      res.send(allFoundItems)
+    } else {
+      res.status(404)
+    }
+  })
+})
+
 app.get("/questions/:threadNo", (req, res) => {
-  const threadNumber = parseInt(req.params.threadNo)
+  const threadNumber = req.params.threadNo
   console.log(threadNumber)
   ForumInput.find({ threadNo: threadNumber }).then(allFoundItems => {
     console.log(allFoundItems)

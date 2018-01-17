@@ -11,7 +11,7 @@ export default class Threads extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8082/questions").then(response => {
+    fetch("http://localhost:8082/questions/original").then(response => {
       return response.json()
     }).then(json => {
       this.setState({ forumThreads: json })
@@ -24,6 +24,9 @@ export default class Threads extends React.Component {
       <div>
         {this.state.forumThreads.map(item => {
           return <Thread
+            formInput={this.props.formInput}
+            type={this.props.type}
+            date={this.props.date}
             item={item} />
         })}
       </div>

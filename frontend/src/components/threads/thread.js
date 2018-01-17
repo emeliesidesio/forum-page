@@ -2,19 +2,6 @@ import React from "react"
 import Form from "components/form/form"
 import "./thread.css"
 
-const commentForm = [
-  { inputName: "id", inputType: "text", inputPlaceHolder: "Question ID" },
-  // { inputName: "threadNo", inputType: "text", inputPlaceHolder: "Thread Number" },
-  { inputName: "type", inputType: "text", inputPlaceHolder: "Question Type" },
-  { inputName: "title", inputType: "text", inputPlaceHolder: "Question title" },
-  { inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:" },
-  { inputName: "date", inputType: "text", inputPlaceHolder: "Date of submission:" },
-  { inputName: "sender", inputType: "text", inputPlaceHolder: "Your name here:" },
-  { inputName: "published", inputType: "radio", inputPlaceHolder: "Is this published?" },
-  { inputName: "handled", inputType: "radio", inputPlaceHolder: "Has this been handled?" },
-  { inputName: "image", inputType: "text", inputPlaceHolder: "Upload your picture" }
-]
-
 export default class Thread extends React.Component {
 
   constructor(props) {
@@ -58,8 +45,10 @@ export default class Thread extends React.Component {
           )
         })}
         <Form
-          formInput={commentForm}
-          threadNo={this.props.item.threadNo} />
+          formInput={this.props.formInput}
+          threadNo={this.props.item.threadNo}
+          type={this.props.type}
+          date={this.props.date} />
       </ul>
     )
   }
