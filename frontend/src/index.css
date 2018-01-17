@@ -71,5 +71,40 @@ h2 {
   width: 100%;
   border-radius: 0 0 5px 5px;
   padding: 20px;
-  opacity: 0.5;
+  opacity: 0.6;
+}
+
+.thread-form input {
+  background: none;
+  border: none;
+  color: white;
+  border-bottom: 1px solid white;
+  outline: none;
+  width: 550px;
+  margin-bottom: 20px;
+  padding: 0 0 10px 5px;
+}
+
+.thread-form input::placeholder {
+  font-size: 10px;
+  color: white;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.thread-form .submit-btn {
+  border: 1px solid white;
+  text-transform: uppercase;
+  color: white;
+  font-weight: lighter;
+  width: 90px;
+  border-radius: 5px;
+  margin: 0;
+  padding: 10px;
+}
+
+.thread-form .submit-btn:hover {
+  background-color: white;
+  color: #34A390;
 }
