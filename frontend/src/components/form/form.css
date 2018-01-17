@@ -39,7 +39,8 @@ input::placeholder {
   color: #34A390;
   font-weight: lighter;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  border: none;
 }
 
 .submit-btn {
@@ -50,9 +51,9 @@ input::placeholder {
   color: white;
   font-weight: lighter;
   width: 90px;
-  margin-top: 10px;
+  margin-top: 30px;
   border-radius: 5px;
-  padding-top: 8px;
+  padding: 10px;
 }
 
 .submit-btn:hover {

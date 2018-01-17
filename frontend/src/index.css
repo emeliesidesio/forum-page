@@ -96,14 +96,12 @@ h2 {
 .thread-form .submit-btn {
   border: 1px solid white;
   text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1px;
   color: white;
   font-weight: lighter;
   width: 90px;
-  margin-top: 10px;
   border-radius: 5px;
-  padding-top: 8px;
+  margin: 0;
+  padding: 10px;
 }
 
 .thread-form .submit-btn:hover {
