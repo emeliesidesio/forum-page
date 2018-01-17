@@ -14,8 +14,6 @@ const responseForm = [
   { inputName: "sender", inputType: "text", inputPlaceHolder: "Your name here:" }
 ]
 
-const today = "2018-01-17" // get date somehow
-
 class App extends React.Component {
 
   render() {
@@ -30,15 +28,13 @@ class App extends React.Component {
             <h2>Latest questions</h2>
             <Threads
               formInput={responseForm}
-              type="response"
-              date={today} />
+              type="response" />
           </div>
           <div className="question-form">
             <h2>Post a question</h2>
             <Form
               formInput={newQuestionForm}
-              type="newQuestion"
-              date={today} />
+              type="newQuestion" />
           </div>
         </div>
       </div>

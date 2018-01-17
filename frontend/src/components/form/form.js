@@ -23,7 +23,7 @@ export default class Form extends React.Component {
       type: gotType,
       title: "",
       text: "",
-      date: "",
+      date: new Date(),
       sender: "",
       published: "",
       handled: "",
@@ -48,6 +48,11 @@ export default class Form extends React.Component {
       body: JSON.stringify(this.state)
     }).then(response => {
       return response.json()
+    })
+    this.setState({
+      title: "",
+      text: "",
+      sender: ""
     })
   }
 
