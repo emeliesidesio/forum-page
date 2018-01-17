@@ -4,6 +4,7 @@ import "./thread.css"
 
 const commentForm = [
   { inputName: "id", inputType: "text", inputPlaceHolder: "Question ID" },
+  { inputName: "threadNo", inputType: "text", inputPlaceHolder: "Thread Number" },
   { inputName: "type", inputType: "text", inputPlaceHolder: "Question Type" },
   { inputName: "title", inputType: "text", inputPlaceHolder: "Question title" },
   { inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:" },
@@ -16,10 +17,30 @@ const commentForm = [
 
 export default class Thread extends React.Component {
 
+  // En funktion som visar tråden när vi klickar på titeln. Toggleclass, fetch med threadNo.
+
+  handleTitleClick = () => {
+    const threadNo = this.props.item.threadNo
+    console.log("tråd", threadNo)
+  }
+
+  handleThreadItems = threadNo => {
+    fetch("http://localhost:8082/questions", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(this.state)
+    }).then(response => {
+      return response.json()
+    })
+  }
+
   render() {
     return (
       <ul className="accordion-list">
-        <li>{this.props.item.text}</li>
+        <li onClick={this.handleTitleClick}>{this.props.item.title}</li>
         <Form
           formInput={commentForm} />
       </ul>

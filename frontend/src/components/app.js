@@ -5,6 +5,7 @@ import Threads from "components/threads/threads"
 
 const newQuestionForm = [
   { inputName: "id", inputType: "text", inputPlaceHolder: "Question ID" },
+  { inputName: "threadNo", inputType: "text", inputPlaceHolder: "Thread Number" },
   { inputName: "type", inputType: "text", inputPlaceHolder: "Question Type" },
   { inputName: "title", inputType: "text", inputPlaceHolder: "Question title" },
   { inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:" },

@@ -17,6 +17,7 @@ mongoose.connection.on("error", err => console.error("Connection error:", err))
 mongoose.connection.once("open", () => console.log("Connected to mongodb"))
 
 const ForumInput = mongoose.model("ForumInput", {
+  id: Number,
   threadNo: Number,
   type: String,
   title: String,
@@ -51,6 +52,19 @@ app.post("/answers", (req, res) => {
 app.get("/questions", (req, res) => {
   ForumInput.find().then(allQuestions => {
     res.json(allQuestions)
+  })
+})
+
+app.get("/questions/:threadNo", (req, res) => {
+  const threadNumber = parseInt(req.params.threadNo)
+  console.log(threadNumber)
+  ForumInput.find({ threadNo: threadNumber }).then(allFoundItems => {
+    console.log(allFoundItems)
+    if (allFoundItems) {
+      res.send(allFoundItems)
+    } else {
+      res.status(404)
+    }
   })
 })
 
