@@ -1,5 +1,4 @@
 import React from "react"
-// import { Link } from "react-router-dom"
 import Form from "components/form/form"
 import Category from "components/category/category"
 import Threads from "components/threads/threads"
@@ -57,7 +56,6 @@ export default class Users extends React.Component {
               type="newQuestion" />
           </div>
         </div>
-        {/* <Link to="/admin">Admin</Link> */}
       </div>
     )
   }
