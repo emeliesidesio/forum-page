@@ -35,7 +35,8 @@ const ForumInput = mongoose.model("ForumInput", {
   },
   publish: Boolean,
   handled: Boolean,
-  image: String
+  image: String,
+  category: String
 })
 
 app.get("/", (req, res) =>

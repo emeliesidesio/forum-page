@@ -16,6 +16,24 @@ const responseForm = [
 ]
 
 export default class Users extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      filterVariable: ""
+    }
+  }
+
+  categoryClick = cate => {
+    console.log("This is the users component speaking about category", cate)
+
+    this.setState({
+      filterVariable: cate
+    }, () => {
+      console.log(this.state.filterVariable)
+    })
+  }
+
   render() {
     return (
       <div className="forum-page">
@@ -24,10 +42,12 @@ export default class Users extends React.Component {
         </div>
         <div className="forum-body">
           <div className="question-container">
-            <Category />
+            <Category
+              categoryClick={this.categoryClick} />
             <h2>Latest questions</h2>
             <Threads
               formInput={responseForm}
+              filterVariable={this.state.filterVariable}
               type="response" />
           </div>
           <div className="question-form">

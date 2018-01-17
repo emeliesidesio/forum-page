@@ -2,6 +2,8 @@ import React from "react"
 import uuid from "uuid"
 import "./form.css"
 
+const categories = ["Installing", "Platforms", "Database", "Collection", "BSON"]
+
 export default class Form extends React.Component {
 
   constructor(props) {
@@ -27,7 +29,8 @@ export default class Form extends React.Component {
       sender: "",
       published: "",
       handled: "",
-      image: ""
+      image: "",
+      category: ""
     }
   }
 
@@ -72,6 +75,16 @@ export default class Form extends React.Component {
             </div>
           )
         })}
+
+        <p>Category:</p>
+        <select name="category" onChange={this.handleInput} >
+          {categories.map(item => {
+            return (
+              <option value={item}>{item}</option>
+            )
+          })}
+        </select>
+
         <div>
           <input className="submit-btn" type="submit" value="Send" />
         </div>
