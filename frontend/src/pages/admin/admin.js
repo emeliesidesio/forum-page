@@ -7,8 +7,8 @@ import "./admin.css"
 const AdminResponseForm = [
   { inputName: "text", inputType: "text", inputPlaceHolder: "Write your question here:" },
   { inputName: "sender", inputType: "text", inputPlaceHolder: "Your name here:" },
-  { inputName: "published", inputType: "radio", inputPlaceHolder: "Is this published?" },
-  { inputName: "handled", inputType: "radio", inputPlaceHolder: "Has this been handled?" }
+  // { inputName: "published", inputType: "radio", inputPlaceHolder: "Is this published?" },
+  // { inputName: "handled", inputType: "radio", inputPlaceHolder: "Has this been handled?" }
 ]
 
 export default class Admin extends React.Component {

@@ -54,6 +54,7 @@ export default class Form extends React.Component {
       },
       body: JSON.stringify(this.state)
     }).then(response => {
+      console.log(response)
       return response.json()
     })
     this.setState({
