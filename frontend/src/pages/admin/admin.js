@@ -13,6 +13,22 @@ const AdminResponseForm = [
 
 export default class Admin extends React.Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      filterVariable: ""
+    }
+  }
+
+  categoryClick = cate => {
+    console.log("This is the admin component speaking about category", cate)
+    this.setState({
+      filterVariable: cate
+    }, () => {
+      console.log(this.state.filterVariable)
+    })
+  }
+
   render() {
     return (
       <div className="forum-page">
@@ -22,11 +38,13 @@ export default class Admin extends React.Component {
         <div className="forum-body">
           <div className="question-container">
             <div className="category-button-color">
-              <Category />
+              <Category
+                categoryClick={this.categoryClick} />
             </div>
             <h2 className="question-heading-latest">Latest questions</h2>
             <Threads
               formInput={AdminResponseForm}
+              filterVariable={this.state.filterVariable}
               type="adminResponse" />
           </div>
         </div>

@@ -44,17 +44,17 @@ export default class Thread extends React.Component {
               <div className="date-field">{item.date}</div>
               <div className="text-field">{item.text}</div>
               <div className="sender-field">{item.sender}</div>
-              <div className="thread-form">
-                <Form
-                  formInput={this.props.formInput}
-                  threadNo={this.props.item.threadNo}
-                  type={this.props.type}
-                  date={this.props.date}
-                  category={this.props.item.category} />
-              </div>
             </div>
           )
         })}
+        <div className="thread-form">
+          <Form
+            formInput={this.props.formInput}
+            threadNo={this.props.item.threadNo}
+            type={this.props.type}
+            date={this.props.date}
+            category={this.props.item.category} />
+        </div>
       </ul>
     )
   }
