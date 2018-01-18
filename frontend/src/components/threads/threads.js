@@ -14,7 +14,8 @@ export default class Threads extends React.Component {
     fetch("http://localhost:8082/questions/original").then(response => {
       return response.json()
     }).then(json => {
-      this.setState({ forumThreads: json })
+      const reversedJson = json.reverse()
+      this.setState({ forumThreads: reversedJson })
       console.log("Grejer från DB", this.state.forumThreads)
     })
   }

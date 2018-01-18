@@ -44,7 +44,7 @@ app.post("/questions", (req, res) => {
   const question = new ForumInput(req.body)
 
   question.save()
-    .then(() => { res.status(201).send("Question asked") })
+    .then(() => { res.status(201).send({answer: "Question asked"}) })
     .catch(err => { res.status(400).send(err)} )
 })
 
