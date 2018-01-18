@@ -42,25 +42,25 @@ export default class Thread extends React.Component {
     return (
       <ul className="accordion-list">
         <li data-message={this.props.item.threadNo} onClick={this.handleTitleClick}>{this.props.item.title}</li>
-        {this.state.forumThread.map(item => {
-          return (
-            <div className={this.state.open ? "open" : "closed"}>
+        <div className={this.state.open ? "open" : "closed"}>
+          {this.state.forumThread.map(item => {
+            return (
               <div className="thread-container">
                 <div className="date-field">{item.date}</div>
                 <div className="text-field">{item.text}</div>
                 <div className="sender-field">{item.sender}</div>
-                <div className="thread-form">
-                  <Form
-                    formInput={this.props.formInput}
-                    threadNo={this.props.item.threadNo}
-                    type={this.props.type}
-                    date={this.props.date}
-                    category={this.props.item.category} />
-                </div>
               </div>
-            </div>
-          )
-        })}
+            )
+          })}
+          <div className="thread-form">
+            <Form
+              formInput={this.props.formInput}
+              threadNo={this.props.item.threadNo}
+              type={this.props.type}
+              date={this.props.date}
+              category={this.props.item.category} />
+          </div>
+        </div>
       </ul>
     )
   }
