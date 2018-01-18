@@ -2,7 +2,7 @@ import React from "react"
 import uuid from "uuid"
 import "./form.css"
 
-const categories = ["Choose one" , "Installing", "Platforms", "Database", "Collection", "BSON"]
+const categories = ["Choose one", "Installing", "Platforms", "Database", "Collection", "BSON"]
 
 export default class Form extends React.Component {
 
@@ -65,7 +65,6 @@ export default class Form extends React.Component {
   }
 
   render() {
-
     return (
       <form onSubmit={this.handleSubmit} className={`form-container ${this.props.type}`}>
         {this.props.formInput.map(item => {
@@ -88,7 +87,7 @@ export default class Form extends React.Component {
           style={{ visibility: this.props.type === "newQuestion" ? "visible" : "hidden" }}>
 
           Category:
-          <select className="selectCategory" name="category" onChange={this.handleInput} >
+          <select className="selectCategory" name="category" onChange={this.handleInput}>
             {categories.map(item =>
               <option value={item}>{item}</option>)}
           </select>

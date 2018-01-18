@@ -38,10 +38,7 @@ export default class Threads extends React.Component {
             formInput={this.props.formInput}
             type={this.props.type}
             date={this.props.date}
-            item={item}
-            // category={this.props.filterVariable}
-          />)}
-
+            item={item} />)}
       </div>
     )
   }
