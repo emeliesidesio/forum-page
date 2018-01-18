@@ -32,11 +32,23 @@
   margin-bottom: 30px;
 }
 
+.adminResponse .date-field {
+  background: orange;
+  opacity: 0.6;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
 .date-field {
   height: auto;
   padding-top: 25px;
   font-size: 12px;
   padding-left: 15px;
+  background: #34A390;
+  opacity: 0.6;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .text-field {

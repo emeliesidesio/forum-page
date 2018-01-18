@@ -40,7 +40,7 @@ export default class Thread extends React.Component {
         <li data-message={this.props.item.threadNo} onClick={this.handleTitleClick} >{this.props.item.title}</li>
         {this.state.forumThread.map(item => {
           return (
-            <div className="thread-container">
+            <div className={`thread-container ${item.type}`}>
               <div className="date-field">{item.date}</div>
               <div className="text-field">{item.text}</div>
               <div className="sender-field">{item.sender}</div>
