@@ -67,7 +67,7 @@ export default class Form extends React.Component {
   render() {
 
     return (
-      <form onSubmit={this.handleSubmit} className="form-container">
+      <form onSubmit={this.handleSubmit} className={`form-container ${this.props.type}`}>
         {this.props.formInput.map(item => {
           return (
             <div>

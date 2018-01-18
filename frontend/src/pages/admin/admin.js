@@ -36,12 +36,12 @@ export default class Admin extends React.Component {
           <h1>MongoDB Admin</h1>
         </div>
         <div className="forum-body">
-          <div className="question-container">
+          <div className="admin-question-container">
             <div className="category-button-color">
               <Category
                 categoryClick={this.categoryClick} />
             </div>
-            <h2 className="question-heading-latest">Latest questions</h2>
+            <h2>Latest questions</h2>
             <Threads
               formInput={AdminResponseForm}
               filterVariable={this.state.filterVariable}
