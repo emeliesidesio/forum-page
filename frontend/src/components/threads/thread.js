@@ -1,4 +1,5 @@
 import React from "react"
+import moment from "moment"
 import Form from "components/form/form"
 import "./thread.css"
 
@@ -30,7 +31,7 @@ export default class Thread extends React.Component {
   }
 
   handleTitleClick = event => {
-    const threadNo = event.target.dataset.message //this.props.item.threadNo
+    const threadNo = event.target.dataset.message
     console.log("tråd", threadNo)
     this.handleThreadItems(threadNo)
     this.setState({
@@ -46,7 +47,7 @@ export default class Thread extends React.Component {
           {this.state.forumThread.map(item => {
             return (
               <div className={`thread-container ${item.type}`}>
-                <div className="date-field">{item.date}</div>
+                <div className="date-field">{moment(item.date).fromNow()}</div>
                 <div className="text-field">{item.text}</div>
                 <div className="sender-field">{item.sender}</div>
               </div>
