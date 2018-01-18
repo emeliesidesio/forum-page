@@ -7,6 +7,16 @@
   align-items: center;
 }
 
+.admin-forum-body {
+  max-width: 1000px;
+  height: auto;
+  margin: 50px auto 50px auto;
+}
+
+.admin-question-container {
+  margin: auto;
+}
+
 .category-button-color button {
   height: 50px;
   width: 110px;
@@ -24,4 +34,12 @@
 .category-button-color button:hover {
   background-color: orange;
   color: white;
+}
+
+.admin-question-container li {
+  color: orange;
+}
+
+.admin-question-container .thread-form {
+  background: orange;
 }
