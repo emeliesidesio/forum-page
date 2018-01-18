@@ -7,9 +7,15 @@
   align-items: center;
 }
 
-/* .category-button-color {
-  color: #ff9800;
-} */
+.admin-forum-body {
+  max-width: 1000px;
+  height: auto;
+  margin: 50px auto 50px auto;
+}
+
+.admin-question-container {
+  margin: auto;
+}
 
 .category-button-color button {
   height: 50px;
@@ -26,13 +32,14 @@
 }
 
 .category-button-color button:hover {
-  background-color: #ff9800;
+  background-color: orange;
   color: white;
 }
 
-.question-heading-latest {
-    font-size: 25px;
-    margin: 40px 0 20px 0;
-    color: #FB8C00;
-    font-weight: lighter;
+.admin-question-container li {
+  color: orange;
+}
+
+.admin-question-container .thread-form {
+  background: orange;
 }

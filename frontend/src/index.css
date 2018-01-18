@@ -110,3 +110,13 @@ h2 {
   background-color: white;
   color: #34A390;
 }
+
+.admin-question-container {
+  width: 60%;
+  height: 300px;
+}
+
+.admin-question-container h2 {
+  color: orange;
+  margin: 40px 0 20px 0;
+}
