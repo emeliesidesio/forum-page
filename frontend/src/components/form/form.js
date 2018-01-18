@@ -2,7 +2,7 @@ import React from "react"
 import uuid from "uuid"
 import "./form.css"
 
-const categories = ["Installing", "Platforms", "Database", "Collection", "BSON"]
+const categories = ["Choose one" , "Installing", "Platforms", "Database", "Collection", "BSON"]
 
 export default class Form extends React.Component {
 
