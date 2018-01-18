@@ -37,14 +37,12 @@ h2 {
 .forum-body {
   max-width: 1000px;
   margin: 50px auto 50px auto;
-  padding-bottom: 50px;
   display: flex;
   justify-content: space-between;
 }
 
 .question-container {
-  width: 60%;
-  height: 300px;
+  width: 600px;
 }
 
 .question-container h2 {
@@ -55,8 +53,8 @@ h2 {
 }
 
 .question-form {
-  width: 35%;
-  height: auto;
+  width: 350px;;
+  height: 380px;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
@@ -119,4 +117,39 @@ h2 {
 .admin-question-container h2 {
   color: orange;
   margin: 40px 0 20px 0;
+}
+
+@media (min-width: 700px) and (max-width: 1050px) {
+  .forum-body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .question-container {
+    width: 600px;
+    order: 1;
+  }
+  .question-form {
+    margin-bottom: 50px;
+    order: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .forum-body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .question-container {
+    width: 350px;
+    order: 1;
+  }
+  .question-form {
+    margin-bottom: 30px;
+    order: 0;
+  }
+  .forum-top {
+    height: 300px;
+  }
 }

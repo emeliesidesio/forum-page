@@ -27,3 +27,13 @@
   background-color: #34A390;
   color: white;
 }
+
+@media (max-width: 700px) {
+  .category-box ul  {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .category-box button {
+    margin: 2px;
+  }
+}
